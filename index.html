@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Servicio técnico en Salta: cortadoras de fiambre, balanzas y refrigeración comercial; aire acondicionado del auto, carga de gas y diagnóstico computarizado; instalación de aire acondicionado. Pedí presupuesto por WhatsApp.">
+<link rel="canonical" href="https://servitecsalta.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Servitec Salta · Servicio técnico">
+<meta property="og:description" content="Equipamiento comercial, refrigeración del automotor y aire acondicionado. Presupuesto por WhatsApp.">
+<meta property="og:url" content="https://servitecsalta.com/">
+<meta property="og:image" content="https://servitecsalta.com/img/mec-engine.jpg">
+<meta name="theme-color" content="#c81e1e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c81e1e'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial' font-weight='900' font-size='38' text-anchor='middle' fill='%23fff'%3ES%3C/text%3E%3C/svg%3E">
+<title>Servitec Salta · Servicio técnico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  try { var t = localStorage.getItem('servitec-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<style>
+  /* Brand: black · signal red · white (from the shop's gear-S sign) */
+  :root{
+    --bg:#f4f4f2; --bg2:#e9e9e6; --surface:#ffffff; --line:#dcdcd8;
+    --text:#131417; --muted:#5d6068; --accent:#c81e1e; --accent-ink:#fff; --dark:#111214; --dark-ink:#f4f4f2;
+    --shadow:0 18px 40px rgba(17,18,20,.12);
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0e0f11; --bg2:#14161a; --surface:#1a1d21; --line:#2a2e34;
+      --text:#f2f2f0; --muted:#a2a6ae; --accent:#ef3b3b; --accent-ink:#fff; --dark:#1a1d21; --dark-ink:#f2f2f0;
+      --shadow:0 18px 40px rgba(0,0,0,.5);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0e0f11; --bg2:#14161a; --surface:#1a1d21; --line:#2a2e34;
+    --text:#f2f2f0; --muted:#a2a6ae; --accent:#ef3b3b; --accent-ink:#fff; --dark:#1a1d21; --dark-ink:#f2f2f0;
+    --shadow:0 18px 40px rgba(0,0,0,.5);
+    color-scheme:dark;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;transition:background .3s,color .3s}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button,input,select,textarea{font:inherit;color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  h1,h2,h3,.label,.btn,nav a,.logo b{font-family:"Barlow Condensed",Impact,sans-serif;text-transform:uppercase}
+  h1,h2,h3{font-weight:800;line-height:.98;letter-spacing:.005em}
+  .label{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-size:15px;font-weight:700;letter-spacing:.16em}
+  .label::before{content:"";width:22px;height:3px;background:currentColor}
+
+  .draft{background:var(--accent);color:#fff;font-size:13px;text-align:center;padding:7px 16px;font-weight:500}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:14px}
+  .logo{display:flex;align-items:center;gap:10px}
+  .gear{width:44px;height:44px}
+  .gear .cog{transform-origin:24px 24px;animation:spin 14s linear infinite}
+  .logo:hover .gear .cog{animation-duration:2.5s}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media(prefers-reduced-motion:reduce){.gear .cog{animation:none}}
+  .logo b{display:block;font-size:26px;font-weight:800;line-height:.9;letter-spacing:.04em}
+  .logo b span{color:var(--accent)}
+  .logo small{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.06em;margin-top:3px}
+  nav{display:flex;align-items:center;gap:22px}
+  nav a{font-size:17px;font-weight:700;letter-spacing:.06em;color:var(--muted);transition:color .2s}
+  nav a:hover{color:var(--text)}
+  @media(max-width:900px){nav a.link{display:none}}
+  .round{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+  .round:hover{border-color:var(--accent)}
+  .toggle .moon{display:none}
+  :root[data-theme="dark"] .toggle .sun{display:none}
+  :root[data-theme="dark"] .toggle .moon{display:block}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .toggle .sun{display:none}
+    :root:not([data-theme="light"]) .toggle .moon{display:block}
+  }
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:18px;letter-spacing:.06em;padding:13px 24px;border-radius:6px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,filter .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px color-mix(in srgb,var(--accent) 35%,transparent)}
+  .btn.sm{padding:9px 16px;font-size:16px}
+  .btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+  .btn.wa{background:#1fa855}
+  @media(max-width:560px){header .btn.sm{display:none}}
+
+  /* Hero */
+  .hero{position:relative;color:#fff;overflow:hidden;min-height:min(80vh,700px);display:flex;align-items:center}
+  .hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,11,13,.94) 0%,rgba(10,11,13,.75) 45%,rgba(10,11,13,.25) 100%)}
+  .hero .wrap{position:relative;z-index:1;width:100%;padding-top:70px;padding-bottom:70px}
+  .hero .label{color:#ff5a5a}
+  .hero h1{font-size:clamp(54px,8.5vw,108px);margin:14px 0 18px;max-width:780px}
+  .hero h1 span{color:#ff4040}
+  .hero p{font-size:18px;max-width:540px;opacity:.86;margin-bottom:28px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .stars{display:flex;align-items:center;gap:14px;margin-top:34px}
+  .stars b{font-family:"Barlow Condensed";font-size:44px;line-height:1}
+  .stars span{color:#ffc84a;letter-spacing:2px}
+  .stars small{display:block;opacity:.75}
+
+  /* Lines of business */
+  .lines{background:var(--dark);color:var(--dark-ink)}
+  .lines .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+  .lines a{display:flex;gap:14px;align-items:center;padding:22px 18px;border-right:1px solid color-mix(in srgb,var(--dark-ink) 14%,transparent);transition:background .2s}
+  .lines a:last-child{border-right:0}
+  .lines a:hover{background:color-mix(in srgb,var(--accent) 22%,transparent)}
+  .lines svg{width:34px;height:34px;color:#ff4a4a;flex:none}
+  .lines b{display:block;font-family:"Barlow Condensed";text-transform:uppercase;font-size:21px;letter-spacing:.03em;line-height:1.05}
+  .lines small{opacity:.7;font-size:13px}
+  @media(max-width:820px){.lines .wrap{grid-template-columns:1fr}.lines a{border-right:0;border-bottom:1px solid color-mix(in srgb,var(--dark-ink) 14%,transparent)}}
+
+  section{padding:90px 0}
+  .head{margin-bottom:34px;max-width:680px}
+  .head h2{font-size:clamp(40px,6vw,68px);margin-top:10px}
+  .head p{color:var(--muted);margin-top:12px;font-size:17px}
+
+  /* Service area */
+  .area{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch;margin-bottom:70px}
+  .area:last-child{margin-bottom:0}
+  .area.flip{grid-template-columns:1.1fr .9fr}
+  .area.flip .cover{order:2}
+  @media(max-width:900px){.area,.area.flip{grid-template-columns:1fr}.area.flip .cover{order:0}}
+  .cover{position:relative;border-radius:14px;overflow:hidden;min-height:360px;color:#fff;display:flex;align-items:flex-end}
+  .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+  .cover:hover img{transform:scale(1.04)}
+  .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,11,13,.92) 0%,rgba(10,11,13,.2) 65%)}
+  .cover .txt{position:relative;z-index:1;padding:28px}
+  .cover .num{font-family:"Barlow Condensed";font-weight:800;font-size:18px;color:#ff4a4a;letter-spacing:.1em}
+  .cover h3{font-size:clamp(34px,4vw,50px);margin:4px 0 8px}
+  .cover p{opacity:.85;max-width:420px}
+  .svc-list{display:grid;gap:12px}
+  .svc{display:grid;grid-template-columns:120px 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:border-color .2s,transform .2s}
+  .svc:hover{border-color:var(--accent);transform:translateX(4px)}
+  .svc img{width:120px;height:100%;min-height:118px;object-fit:cover}
+  .svc .b{padding:14px 16px 14px 0;display:flex;flex-direction:column;gap:4px}
+  .svc h4{font-family:"Barlow Condensed";text-transform:uppercase;font-size:23px;font-weight:700;letter-spacing:.02em;line-height:1.05}
+  .svc p{color:var(--muted);font-size:14px;line-height:1.5}
+  .svc button{align-self:flex-start;margin-top:4px;background:none;border:0;color:var(--accent);font-weight:700;font-size:14px;cursor:pointer;padding:0}
+  .svc button:hover{text-decoration:underline}
+  @media(max-width:520px){.svc{grid-template-columns:96px 1fr}.svc img{width:96px}}
+
+  /* Why */
+  .why{background:var(--bg2)}
+  .why .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:900px){.why .grid{grid-template-columns:1fr 1fr}}
+  .why .item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .why .item svg{width:30px;height:30px;color:var(--accent);margin-bottom:12px}
+  .why h3{font-size:24px;margin-bottom:6px}
+  .why p{color:var(--muted);font-size:14.5px}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+  @media(max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:18px}}
+  .step{position:relative;padding:0 18px 0 0}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:"Barlow Condensed";font-weight:800;font-size:64px;line-height:1;color:transparent;-webkit-text-stroke:2px var(--accent)}
+  .step h3{font-size:26px;margin:8px 0 6px}
+  .step p{color:var(--muted);font-size:14.5px}
+
+  /* Reviews */
+  .reviews{background:var(--dark);color:var(--dark-ink)}
+  .reviews .head p{color:color-mix(in srgb,var(--dark-ink) 70%,transparent)}
+  .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:900px){.revs{grid-template-columns:1fr}}
+  .rev{border:1px solid color-mix(in srgb,var(--dark-ink) 16%,transparent);border-radius:14px;padding:24px}
+  .rev .s{color:#ffc84a;letter-spacing:2px}
+  .rev q{display:block;font-family:"Barlow Condensed";text-transform:uppercase;font-weight:700;font-size:28px;line-height:1.05;margin:12px 0}
+  .rev small{opacity:.65}
+
+  /* Quote form */
+  .quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+  @media(max-width:900px){.quote .wrap{grid-template-columns:1fr}}
+  .quote aside img{border-radius:14px;width:100%;aspect-ratio:4/3;object-fit:cover;margin-top:24px}
+  form{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;gap:14px;box-shadow:var(--shadow)}
+  label{display:grid;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}
+  input,select,textarea{height:48px;border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:0 14px;font-size:15px;width:100%}
+  textarea{height:96px;padding:12px 14px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  .seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .seg label{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border:1.5px solid var(--line);border-radius:10px;cursor:pointer;color:var(--text);background:var(--bg);font-size:14px;text-align:center}
+  .seg input{display:none}
+  .seg label:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--bg))}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.row2{grid-template-columns:1fr}}
+  .err{color:var(--accent);font-size:13px}
+  .hidden{display:none!important}
+  form .btn{width:100%;font-size:20px;padding:15px}
+  .fine{font-size:12.5px;color:var(--muted);text-align:center}
+
+  /* Contact */
+  .contact{background:var(--bg2)}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  @media(max-width:900px){.contact .wrap{grid-template-columns:1fr}}
+  .hours{list-style:none;margin-top:20px}
+  .hours li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .hours li span:last-child{color:var(--muted);text-align:right}
+  .hours li.today{font-weight:700}
+  .hours li.today span:last-child{color:var(--accent)}
+  .where{display:flex;flex-direction:column;justify-content:flex-end;gap:8px;min-height:340px;border-radius:14px;padding:30px;color:#fff;
+    background:linear-gradient(0deg,rgba(10,11,13,.9),rgba(10,11,13,.25)),url(img/workshop.jpg) center/cover}
+  .where b{font-family:"Barlow Condensed";text-transform:uppercase;font-size:38px;line-height:1}
+  .where .btn{align-self:flex-start;margin-top:10px}
+
+  footer{padding:30px 0;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  .wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:40;transition:transform .2s}
+  .wa-float:hover{transform:scale(1.08)}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="draft">Boceto de propuesta · Diseño y desarrollo: Aldana Correa · Textos y fotos de ejemplo</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Servitec Salta">
+      <svg class="gear" viewBox="0 0 48 48" aria-hidden="true">
+        <g class="cog" fill="currentColor">
+          <path d="M21 3h6l1 5.2a16 16 0 0 1 4.3 1.8l4.4-3 4.2 4.2-3 4.4a16 16 0 0 1 1.8 4.3L45 21v6l-5.2 1a16 16 0 0 1-1.8 4.3l3 4.4-4.2 4.2-4.4-3a16 16 0 0 1-4.3 1.8L27 45h-6l-1-5.2a16 16 0 0 1-4.3-1.8l-4.4 3-4.2-4.2 3-4.4A16 16 0 0 1 8.2 28L3 27v-6l5.2-1a16 16 0 0 1 1.8-4.3l-3-4.4 4.2-4.2 4.4 3A16 16 0 0 1 20 8.2z"/>
+        </g>
+        <circle cx="24" cy="24" r="12.5" fill="var(--bg)"/>
+        <path d="M29.5 18.2c-1.2-1.3-3-2-5.3-2-3.2 0-5.4 1.7-5.4 4.2 0 2.6 2.2 3.4 5.1 4 2.4.5 3.4 1 3.4 2.1 0 1.2-1.3 2-3.2 2-2 0-3.6-.8-4.7-2.1l-1.9 2c1.4 1.7 3.8 2.7 6.5 2.7 3.6 0 6-1.8 6-4.5 0-2.7-2.2-3.6-5.3-4.2-2.2-.4-3.2-.9-3.2-1.9s1.1-1.7 2.8-1.7c1.6 0 2.9.6 3.8 1.5z" fill="var(--accent)"/>
+      </svg>
+      <span><b>Servitec <span>Salta</span></b><small>Servicio técnico de equipamiento comercial</small></span>
+    </a>
+    <nav>
+      <a class="link" href="#servicios">Servicios</a>
+      <a class="link" href="#como">Cómo trabajamos</a>
+      <a class="link" href="#contacto">Contacto</a>
+      <button class="round toggle" id="toggle" aria-label="Cambiar modo claro/oscuro">
+        <svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn sm" href="#presupuesto">Pedir presupuesto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <img src="img/mec-engine.jpg" alt="Técnico trabajando en el motor de un auto">
+  <div class="wrap">
+    <span class="label">Salta capital · Ituzaingó 1245</span>
+    <h1>Servicio técnico <span>que te resuelve.</span></h1>
+    <p>Equipamiento comercial, refrigeración del automotor y aire acondicionado para tu casa. Diagnóstico claro, presupuesto sin vueltas y trabajo responsable.</p>
+    <div class="ctas">
+      <a class="btn" href="#presupuesto">Pedir presupuesto</a>
+      <a class="btn ghost" href="https://wa.me/5493875176758?text=Hola%20Servitec!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+    <div class="stars"><b>5.0</b><div><span>★★★★★</span><small>10 reseñas en Google</small></div></div>
+  </div>
+</section>
+
+<div class="lines">
+  <div class="wrap">
+    <a href="#comercial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6"/><circle cx="9" cy="12" r="2"/><path d="M15 6h6v12h-6M3 20h18"/></svg><span><b>Equipamiento comercial</b><small>Cortadoras, balanzas, heladeras</small></span></a>
+    <a href="#automotor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16l1.5-5A2 2 0 0 1 8.4 9.6h7.2a2 2 0 0 1 1.9 1.4L19 16"/><path d="M3 16h18v3H3zM6 19v2M18 19v2"/><path d="M12 2v4M10 4h4"/></svg><span><b>Refrigeración del automotor</b><small>Gas, diagnóstico, reparaciones</small></span></a>
+    <a href="#hogar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="8" rx="2"/><path d="M6 10h12M7 17c0 1 1 2 0 3M12 17c0 1 1 2 0 3M17 17c0 1 1 2 0 3"/></svg><span><b>Servicios del hogar</b><small>Instalación de aire acondicionado</small></span></a>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="head reveal"><span class="label">Servicios</span><h2>Todo lo que hacemos</h2><p>Tres áreas, un mismo taller. Tocá «Pedir presupuesto» en cualquier servicio y te armamos el mensaje.</p></div>
+
+    <div class="area reveal" id="comercial">
+      <div class="cover"><img src="img/slicer-man.jpg" alt="Cortadora de fiambre"><div class="txt"><span class="num">01</span><h3>Equipamiento comercial</h3><p>Para fiambrerías, carnicerías, almacenes y supermercados. Mantenemos tu negocio funcionando.</p></div></div>
+      <div class="svc-list">
+        <article class="svc"><img src="img/slicer-man.jpg" alt=""><div class="b"><h4>Service de cortadoras de fiambre</h4><p>Afilado, limpieza, ajuste y reparación de cortadoras.</p><button data-pick="Service de cortadora de fiambre">Pedir presupuesto →</button></div></article>
+        <article class="svc"><img src="img/scale.jpg" alt=""><div class="b"><h4>Balanzas</h4><p>Reparación y puesta a punto de balanzas comerciales.</p><button data-pick="Reparación de balanza">Pedir presupuesto →</button></div></article>
+        <article class="svc"><img src="img/fridge-display.jpg" alt=""><div class="b"><h4>Refrigeradores</h4><p>Heladeras exhibidoras, freezers y cámaras: no enfría, pierde gas, ruidos.</p><button data-pick="Refrigerador comercial">Pedir presupuesto →</button></div></article>
+      </div>
+    </div>
+
+    <div class="area flip reveal" id="automotor">
+      <div class="cover"><img src="img/climate.jpg" alt="Panel de climatización de un auto"><div class="txt"><span class="num">02</span><h3>Refrigeración del automotor</h3><p>¿El aire del auto tira caliente o no enfría como antes? Lo revisamos y te decimos qué tiene.</p></div></div>
+      <div class="svc-list">
+        <article class="svc"><img src="img/vent.jpg" alt=""><div class="b"><h4>Carga de gas refrigerante</h4><p>Control de pérdidas y carga para que el aire vuelva a enfriar.</p><button data-pick="Carga de gas refrigerante (auto)">Pedir presupuesto →</button></div></article>
+        <article class="svc"><img src="img/laptop-car.jpg" alt=""><div class="b"><h4>Diagnósticos computarizados</h4><p>Escaneo con equipo para encontrar la falla exacta antes de reparar.</p><button data-pick="Diagnóstico computarizado">Pedir presupuesto →</button></div></article>
+        <article class="svc"><img src="img/mec-hands.jpg" alt=""><div class="b"><h4>Reparaciones generales</h4><p>Compresores, mangueras, ventiladores y todo el sistema de aire.</p><button data-pick="Reparación general (auto)">Pedir presupuesto →</button></div></article>
+      </div>
+    </div>
+
+    <div class="area reveal" id="hogar">
+      <div class="cover"><img src="img/ac-wall.jpg" alt="Unidad exterior de aire acondicionado"><div class="txt"><span class="num">03</span><h3>Servicios del hogar</h3><p>Preparate para el verano salteño con tu aire instalado como corresponde.</p></div></div>
+      <div class="svc-list">
+        <article class="svc"><img src="img/ac-white.jpg" alt=""><div class="b"><h4>Instalación de aire acondicionado</h4><p>Instalación de equipos split: soportes, cañerías, vacío y prueba de funcionamiento.</p><button data-pick="Instalación de aire acondicionado">Pedir presupuesto →</button></div></article>
+        <article class="svc"><img src="img/ac-units.jpg" alt=""><div class="b"><h4>Mantenimiento y carga</h4><p>Limpieza y carga de gas para que el equipo rinda y gaste menos.</p><button data-pick="Mantenimiento de aire acondicionado">Pedir presupuesto →</button></div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="head reveal"><span class="label">Por qué Servitec</span><h2>Trabajo serio, sin vueltas</h2></div>
+    <div class="grid">
+      <div class="item reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><h3>Diagnóstico claro</h3><p>Te explicamos qué tiene el equipo antes de tocar nada.</p></div>
+      <div class="item reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 7h6M9 11h6M9 15h4"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg><h3>Presupuesto sin compromiso</h3><p>Sabés cuánto sale antes de decidir.</p></div>
+      <div class="item reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.6 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg><h3>5.0 en Google</h3><p>Clientes que destacan la responsabilidad y el servicio.</p></div>
+      <div class="item reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5z"/></svg><h3>Tres rubros, un taller</h3><p>El comercio, el auto y la casa resueltos en un solo lugar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <div class="head reveal"><span class="label">Cómo trabajamos</span><h2>Así de simple</h2></div>
+    <div class="steps">
+      <div class="step reveal"><h3>Contanos</h3><p>Por WhatsApp o con el formulario: qué equipo es y qué le pasa.</p></div>
+      <div class="step reveal"><h3>Diagnóstico</h3><p>Lo revisamos en el taller y encontramos la falla.</p></div>
+      <div class="step reveal"><h3>Presupuesto</h3><p>Te pasamos el precio y el tiempo. Vos decidís.</p></div>
+      <div class="step reveal"><h3>Listo</h3><p>Reparamos, probamos y te lo entregamos funcionando.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="head reveal"><span class="label">Reseñas</span><h2>5.0 ★ en Google</h2><p>Lo que dicen los clientes de Servitec Salta.</p></div>
+    <div class="revs">
+      <div class="rev reveal"><span class="s">★★★★★</span><q>Excelente servicio, muy responsable!</q><small>Luciana V. · Google</small></div>
+      <div class="rev reveal"><span class="s">★★★★★</span><q>Muy buen servicio!</q><small>Matías R. · Google</small></div>
+      <div class="rev reveal"><span class="s">★★★★★</span><q>Excelente servicio</q><small>Mariana C. · Google</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="presupuesto">
+  <div class="wrap">
+    <aside class="reveal">
+      <span class="label">Presupuesto</span>
+      <h2 style="font-size:clamp(40px,6vw,64px);margin-top:10px">Contanos qué necesitás</h2>
+      <p style="color:var(--muted);margin-top:12px;font-size:17px">Completá estos datos y se abre WhatsApp con el mensaje armado. Te respondemos con el diagnóstico o el presupuesto.</p>
+      <img src="img/tools-wall.jpg" alt="Herramientas del taller" loading="lazy">
+    </aside>
+    <form id="qform" class="reveal" novalidate>
+      <label>Servicio
+        <select name="service" required>
+          <optgroup label="Equipamiento comercial">
+            <option>Service de cortadora de fiambre</option><option>Reparación de balanza</option><option>Refrigerador comercial</option>
+          </optgroup>
+          <optgroup label="Refrigeración del automotor">
+            <option>Carga de gas refrigerante (auto)</option><option>Diagnóstico computarizado</option><option>Reparación general (auto)</option>
+          </optgroup>
+          <optgroup label="Servicios del hogar">
+            <option>Instalación de aire acondicionado</option><option>Mantenimiento de aire acondicionado</option>
+          </optgroup>
+          <option>Otro / no estoy seguro</option>
+        </select>
+      </label>
+      <label><span id="equipLabel">Equipo (marca y modelo)</span><input name="equip" placeholder="Ej: cortadora Moretti 300"></label>
+      <label>¿Qué le pasa?<textarea name="issue" placeholder="Ej: no corta parejo, hace ruido, el aire tira caliente…"></textarea></label>
+      <div class="seg" role="radiogroup" aria-label="Lugar">
+        <label><input type="radio" name="where" value="taller" checked>🔧 Lo llevo al taller</label>
+        <label><input type="radio" name="where" value="domicilio">📍 Necesito que vengan</label>
+      </div>
+      <div class="row2">
+        <label>Tu nombre<input name="name" autocomplete="given-name" required placeholder="¿Cómo te llamás?"></label>
+        <label id="zoneWrap">Barrio o zona<input name="zone" placeholder="Ej: Tres Cerritos"></label>
+      </div>
+      <p class="err hidden" id="err">Poné tu nombre para poder responderte.</p>
+      <button class="btn wa" type="submit">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+        Enviar por WhatsApp
+      </button>
+      <p class="fine">Sin compromiso. Te responde Servitec directamente.</p>
+    </form>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="label">Contacto</span>
+      <h2 style="font-size:clamp(40px,6vw,64px);margin-top:10px">Horarios</h2>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Lunes</span><span>9:00 a 20:00</span></li>
+        <li data-d="2"><span>Martes</span><span>9:00 a 20:00</span></li>
+        <li data-d="3"><span>Miércoles</span><span>9:00 a 20:30</span></li>
+        <li data-d="4"><span>Jueves</span><span>9:00 a 20:00</span></li>
+        <li data-d="5"><span>Viernes</span><span>Consultar por WhatsApp</span></li>
+        <li data-d="6"><span>Sábado</span><span>9:00 a 15:00</span></li>
+        <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+        <li><span>Teléfono / WhatsApp</span><span><a href="tel:+543875176758">387 517-6758</a></span></li>
+      </ul>
+    </div>
+    <a class="where reveal" href="https://www.google.com/maps/place/Servitec+salta/@-24.8055361,-65.4147491,17z" target="_blank" rel="noopener">
+      <span style="font-size:34px">📍</span>
+      <b>Ituzaingó 1245</b>
+      <span>Salta capital</span>
+      <span class="btn sm">Cómo llegar →</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Servitec Salta · Servicio técnico de equipamiento comercial</span>
+    <span>Boceto por Aldana Correa · aldicorrea.com · Fotos de ejemplo: Unsplash</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5493875176758?text=Hola%20Servitec!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+(() => {
+  const WA = '5493875176758';
+  const $ = (s) => document.querySelector(s);
+  const form = $('#qform'), f = form.elements;
+
+  /* "Pedir presupuesto" on a service card preselects it in the form */
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-pick]'); if (!b) return;
+    f.service.value = b.dataset.pick;
+    if (/aire acondicionado/i.test(b.dataset.pick)) f.where.value = 'domicilio';
+    sync();
+    $('#presupuesto').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => f.issue.focus({ preventScroll: true }), 600);
+  });
+
+  /* adapt the equipment field to the kind of service */
+  function sync() {
+    const s = f.service.value;
+    const auto = /\(auto\)|computarizado/i.test(s), ac = /aire acondicionado/i.test(s);
+    $('#equipLabel').textContent = auto ? 'Vehículo (marca, modelo y año)' : ac ? 'Equipo (marca y frigorías)' : 'Equipo (marca y modelo)';
+    f.equip.placeholder = auto ? 'Ej: Peugeot 208 2019' : ac ? 'Ej: BGH 3000 frigorías' : 'Ej: cortadora Moretti 300';
+    $('#zoneWrap').style.opacity = f.where.value === 'domicilio' ? 1 : .55;
+  }
+  form.addEventListener('change', sync); sync();
+
+  try { const s = JSON.parse(localStorage.getItem('servitec-customer') || '{}'); if (s.name) f.name.value = s.name; if (s.zone) f.zone.value = s.zone; } catch (e) {}
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!f.name.value.trim()) { $('#err').classList.remove('hidden'); f.name.focus(); return; }
+    $('#err').classList.add('hidden');
+    try { localStorage.setItem('servitec-customer', JSON.stringify({ name: f.name.value.trim(), zone: f.zone.value.trim() })); } catch (e) {}
+    const msg = [
+      '¡Hola Servitec! 👋 Quiero pedir un presupuesto:', '',
+      `🔧 Servicio: ${f.service.value}`,
+      f.equip.value.trim() ? `📦 ${/\(auto\)|computarizado/i.test(f.service.value) ? 'Vehículo' : 'Equipo'}: ${f.equip.value.trim()}` : '',
+      f.issue.value.trim() ? `❓ Qué le pasa: ${f.issue.value.trim()}` : '',
+      f.where.value === 'domicilio' ? `📍 Necesito que vengan${f.zone.value.trim() ? ' a ' + f.zone.value.trim() : ''}` : '🏠 Lo llevo al taller',
+      `👤 ${f.name.value.trim()}`,
+    ].filter(Boolean).join('\n');
+    window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+  });
+
+  /* highlight today's opening hours */
+  const today = new Date().getDay();
+  document.querySelectorAll('#hours [data-d]').forEach((li) => li.classList.toggle('today', +li.dataset.d === today));
+
+  /* reveal on scroll */
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: .12 }) : null;
+  document.querySelectorAll('.reveal').forEach((el) => io ? io.observe(el) : el.classList.add('in'));
+
+  /* theme */
+  $('#toggle').addEventListener('click', () => {
+    const root = document.documentElement;
+    const cur = root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = cur === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('servitec-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
