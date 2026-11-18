@@ -53,7 +53,6 @@
   .label{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-size:15px;font-weight:700;letter-spacing:.16em}
   .label::before{content:"";width:22px;height:3px;background:currentColor}
 
-  .draft{background:var(--accent);color:#fff;font-size:13px;text-align:center;padding:7px 16px;font-weight:500}
 
   /* Header */
   header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -169,6 +168,9 @@
   .rev .s{color:#ffc84a;letter-spacing:2px}
   .rev q{display:block;font-family:"Barlow Condensed";text-transform:uppercase;font-weight:700;font-size:28px;line-height:1.05;margin:12px 0}
   .rev small{opacity:.65}
+  .rev.more{color:inherit;text-decoration:none;background:var(--accent);border-color:var(--accent)}
+  .rev.more .s{color:#fff}
+  .rev.more small{opacity:.85}
 
   /* Quote form */
   .quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
@@ -199,10 +201,11 @@
   .hours li span:last-child{color:var(--muted);text-align:right}
   .hours li.today{font-weight:700}
   .hours li.today span:last-child{color:var(--accent)}
-  .where{display:flex;flex-direction:column;justify-content:flex-end;gap:8px;min-height:340px;border-radius:14px;padding:30px;color:#fff;
-    background:linear-gradient(0deg,rgba(10,11,13,.9),rgba(10,11,13,.25)),url(img/workshop.jpg) center/cover}
-  .where b{font-family:"Barlow Condensed";text-transform:uppercase;font-size:38px;line-height:1}
-  .where .btn{align-self:flex-start;margin-top:10px}
+  .where{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+  .where iframe{display:block;width:100%;height:340px;border:0;flex:1;min-height:300px}
+  .where .addr{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:18px 22px;background:var(--dark);color:var(--dark-ink)}
+  .where b{display:block;font-family:"Barlow Condensed";text-transform:uppercase;font-size:30px;line-height:1}
+  .where .addr span{opacity:.75;font-size:14px}
 
   footer{padding:30px 0;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -215,8 +218,6 @@
 </style>
 </head>
 <body>
-
-<div class="draft">Boceto de propuesta · Diseño y desarrollo: Aldana Correa · Textos y fotos de ejemplo</div>
 
 <header>
   <div class="wrap">
@@ -328,6 +329,9 @@
       <div class="rev reveal"><span class="s">★★★★★</span><q>Excelente servicio, muy responsable!</q><small>Luciana V. · Google</small></div>
       <div class="rev reveal"><span class="s">★★★★★</span><q>Muy buen servicio!</q><small>Matías R. · Google</small></div>
       <div class="rev reveal"><span class="s">★★★★★</span><q>Excelente servicio</q><small>Mariana C. · Google</small></div>
+      <div class="rev reveal"><span class="s">★★★★★</span><q>Rapidez y excelente atención, asesoramiento</q><small>Cristian E. · Google</small></div>
+      <div class="rev reveal"><span class="s">★★★★★</span><q>Excelente 👌</q><small>Luz U. · Google</small></div>
+      <a class="rev reveal more" href="https://www.google.com/maps/place/Servitec+salta/@-24.8055361,-65.4147491,17z/data=!4m8!3m7!1s0x941bc30009192b8f:0xca576daa658565c2!8m2!3d-24.8055361!4d-65.4147491!9m1!1b1" target="_blank" rel="noopener"><span class="s">5.0 · 10 reseñas</span><q>Ver todas en Google →</q><small>Todas de 5 estrellas</small></a>
     </div>
   </div>
 </section>
@@ -385,25 +389,26 @@
         <li data-d="2"><span>Martes</span><span>9:00 a 20:00</span></li>
         <li data-d="3"><span>Miércoles</span><span>9:00 a 20:30</span></li>
         <li data-d="4"><span>Jueves</span><span>9:00 a 20:00</span></li>
-        <li data-d="5"><span>Viernes</span><span>Consultar por WhatsApp</span></li>
+        <li data-d="5"><span>Viernes</span><span>9:00 a 20:00</span></li>
         <li data-d="6"><span>Sábado</span><span>9:00 a 15:00</span></li>
         <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
         <li><span>Teléfono / WhatsApp</span><span><a href="tel:+543875176758">387 517-6758</a></span></li>
       </ul>
     </div>
-    <a class="where reveal" href="https://www.google.com/maps/place/Servitec+salta/@-24.8055361,-65.4147491,17z" target="_blank" rel="noopener">
-      <span style="font-size:34px">📍</span>
-      <b>Ituzaingó 1245</b>
-      <span>Salta capital</span>
-      <span class="btn sm">Cómo llegar →</span>
-    </a>
+    <div class="where reveal">
+      <iframe title="Mapa: Servitec Salta, Ituzaingó 1245, Salta" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1sServitec+Salta,+Ituzaing%C3%B3+1245,+Salta!6i16!3m1!1ses!5m1!1ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <div class="addr">
+        <div><b>📍 Ituzaingó 1245</b><span>Salta capital</span></div>
+        <a class="btn sm" href="https://www.google.com/maps/dir/?api=1&amp;destination=Servitec%20Salta%2C%20Ituzaing%C3%B3%201245%2C%20Salta" target="_blank" rel="noopener">Cómo llegar →</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <span>© 2026 Servitec Salta · Servicio técnico de equipamiento comercial</span>
-    <span>Boceto por Aldana Correa · aldicorrea.com · Fotos de ejemplo: Unsplash</span>
+    <span>Diseño y desarrollo: <a href="https://www.aldicorrea.com" target="_blank" rel="noopener" style="color:inherit">Aldana Correa</a></span>
   </div>
 </footer>
 
