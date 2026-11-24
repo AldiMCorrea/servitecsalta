@@ -101,6 +101,30 @@
   .hero h1 span{color:#ff4040}
   .hero p{font-size:18px;max-width:540px;opacity:.86;margin-bottom:28px}
   .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  /* Hero: rotating services with animated icons */
+  .rotator{display:flex;align-items:center;gap:14px;margin:0 0 26px;padding:10px 22px 10px 10px;width:max-content;min-width:min(420px,100%);max-width:100%;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:999px;backdrop-filter:blur(6px)}
+  .rotator .ic{flex:none;width:48px;height:48px;border-radius:50%;background:#c81e1e;display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 0 0 0 rgba(200,30,30,.6);animation:ring 2.6s ease-out infinite}
+  .rotator .ic svg{position:absolute;width:28px;height:28px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:0;transform:scale(.6)}
+  .rotator .ic svg.on{opacity:1;transform:none;transition:opacity .35s,transform .45s cubic-bezier(.2,1.5,.4,1)}
+  .rotator .ic svg.on .draw{stroke-dasharray:100;stroke-dashoffset:100;animation:draw 1.1s ease forwards}
+  .rotator .ic svg.on .spin{transform-box:fill-box;transform-origin:center;animation:spin 3s linear infinite}
+  .rotator .ic svg.on .blow{animation:blow 1.2s ease-in-out infinite}
+  .rotator .ic svg.on .blow:nth-of-type(2){animation-delay:.2s}.rotator .ic svg.on .blow:nth-of-type(3){animation-delay:.4s}
+  .rotator .ic svg.on .tilt{transform-box:view-box;transform-origin:12px 6px;animation:tilt 1.6s ease-in-out infinite}
+  .rotator .ic svg.on .pulse{stroke-dasharray:40;stroke-dashoffset:40;animation:draw 1.4s linear infinite}
+  .rotator .ic svg.on .drop{animation:drop 1.4s ease-in infinite}
+  .rotator .txt{display:flex;flex-direction:column;overflow:hidden;min-width:0}
+  .rotator .txt small{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;line-height:1.2}
+  .rotator .txt b{font-family:"Barlow Condensed";text-transform:uppercase;font-size:24px;line-height:1.1;white-space:nowrap;animation:wordIn .5s cubic-bezier(.2,.9,.3,1)}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes ring{0%{box-shadow:0 0 0 0 rgba(200,30,30,.6)}70%,100%{box-shadow:0 0 0 12px rgba(200,30,30,0)}}
+  @keyframes blow{0%{transform:translateY(-2px);opacity:0}40%{opacity:1}100%{transform:translateY(4px);opacity:0}}
+  @keyframes tilt{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+  @keyframes drop{0%{transform:translateY(-3px);opacity:0}30%{opacity:1}100%{transform:translateY(5px);opacity:0}}
+  @keyframes wordIn{from{transform:translateY(100%);opacity:0}}
+  @media(max-width:520px){.rotator .txt b{font-size:20px;white-space:normal}.rotator{border-radius:18px}}
+  @media(prefers-reduced-motion:reduce){.rotator *{animation:none!important;stroke-dashoffset:0!important}}
   .stars{display:flex;align-items:center;gap:14px;margin-top:34px}
   .stars b{font-family:"Barlow Condensed";font-size:44px;line-height:1}
   .stars span{color:#ffc84a;letter-spacing:2px}
@@ -312,6 +336,10 @@
     <span class="label">Salta capital · Ituzaingó 1245</span>
     <h1>Servicio técnico <span>que te resuelve.</span></h1>
     <p>Equipamiento comercial, refrigeración del automotor y aire acondicionado para tu casa. Diagnóstico claro, presupuesto sin vueltas y trabajo responsable.</p>
+    <div class="rotator" id="rotator">
+      <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" data-k="slicer" class="on"><circle class="draw spin" cx="10" cy="12" r="6" pathLength="100"/><circle cx="10" cy="12" r="1.6"/><path class="draw" pathLength="100" d="M16 7h5v10h-5M2 20h20"/></svg><svg viewBox="0 0 24 24" data-k="scale"><g class="tilt"><path d="M12 6v-2M4 6h16"/><path d="M4 6l-2.5 6h5zM20 6l-2.5 6h5z"/><path d="M1.5 12a2.5 1.5 0 0 0 5 0M17.5 12a2.5 1.5 0 0 0 5 0"/></g><path class="draw" pathLength="100" d="M12 6v14M8 20h8"/></svg><svg viewBox="0 0 24 24" data-k="fridge"><rect class="draw" pathLength="100" x="5" y="2" width="14" height="20" rx="2"/><path class="draw" pathLength="100" d="M5 9h14M8 5v2M8 12v4"/><path class="drop" d="M15 13.5v2.5"/></svg><svg viewBox="0 0 24 24" data-k="gas"><path class="draw" pathLength="100" d="M5 15l1.5-4.5A2 2 0 0 1 8.4 9h7.2a2 2 0 0 1 1.9 1.5L19 15M3 15h18v3H3zM6 18v2M18 18v2"/><g class="spin"><path d="M12 1.5v6M9.4 3l5.2 3M9.4 6l5.2-3"/></g></svg><svg viewBox="0 0 24 24" data-k="diag"><rect class="draw" pathLength="100" x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/><path class="pulse" pathLength="40" d="M5 11h3l1.5-3 2.5 6 2-4 1.5 1H19"/></svg><svg viewBox="0 0 24 24" data-k="repair"><path class="draw" pathLength="100" d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5z"/></svg><svg viewBox="0 0 24 24" data-k="ac"><rect class="draw" pathLength="100" x="2" y="4" width="20" height="8" rx="2"/><path d="M6 9h12"/><path class="blow" d="M7 15c0 1 1 2 0 3"/><path class="blow" d="M12 15c0 1 1 2 0 3"/><path class="blow" d="M17 15c0 1 1 2 0 3"/></svg></span>
+      <span class="txt"><small>Hacemos</small><b id="rotWord">Service de cortadoras de fiambre</b></span>
+    </div>
     <div class="ctas">
       <a class="btn" href="#presupuesto">Pedir presupuesto</a>
       <a class="btn ghost" href="https://wa.me/5493875176758?text=Hola%20Servitec!%20Quiero%20hacer%20una%20consulta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
@@ -538,6 +566,21 @@
     root.dataset.theme = next;
     try { localStorage.setItem('servitec-theme', next); } catch (e) {}
   });
+})();
+</script>
+<script>
+(function(){
+  var items=[["slicer","Service de cortadoras de fiambre"],["scale","Reparación de balanzas"],["fridge","Heladeras y exhibidoras"],
+    ["gas","Carga de gas del aire del auto"],["diag","Diagnóstico computarizado"],["repair","Reparaciones generales"],["ac","Instalación de aire acondicionado"]];
+  var box=document.getElementById('rotator'); if(!box) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var word=document.getElementById('rotWord'), icons=box.querySelectorAll('svg'), i=0;
+  setInterval(function(){
+    i=(i+1)%items.length;
+    icons.forEach(function(s){ s.classList.toggle('on', s.getAttribute('data-k')===items[i][0]); });
+    var b=document.createElement('b'); b.id='rotWord'; b.textContent=items[i][1];
+    word.parentNode.replaceChild(b, word); word=b;
+  }, 2600);
 })();
 </script>
 </body>
