@@ -21,7 +21,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
   try { var t = localStorage.getItem('servitec-theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
-  try { if (sessionStorage.getItem('servitec-intro')) document.documentElement.classList.add('no-intro'); sessionStorage.setItem('servitec-intro','1'); } catch (e) {}
 </script>
 <style>
   /* Brand: black · signal red · white (from the shop's gear-S sign) */
@@ -248,7 +247,6 @@
   /* Intro splash: logo for ~2.4s, then the page as usual */
   .intro{position:fixed;inset:0;z-index:100;background:#0d0e10;display:grid;place-items:center;
     animation:introOut .7s cubic-bezier(.7,0,.3,1) 2.4s forwards}
-  .no-intro .intro{display:none}
   .intro .box{display:flex;flex-direction:column;align-items:center;gap:18px}
   .intro svg{width:min(50vw,240px);height:auto;overflow:visible}
   .intro .cog{transform-origin:100px 100px;animation:introCog 2.4s cubic-bezier(.3,0,.2,1) both}
